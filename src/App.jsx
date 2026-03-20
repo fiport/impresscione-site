@@ -424,7 +424,7 @@ function SiteFooter() {
             <div className="mt-10 flex flex-wrap gap-4">
               <a
                 className="group relative inline-flex h-[54px] min-w-[180px] items-center justify-center overflow-hidden rounded-none bg-white/5 px-6 outline-none transition-transform active:scale-95"
-                href="https://instagram.com"
+                href="https://www.instagram.com/impress_cione/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -440,7 +440,7 @@ function SiteFooter() {
 
               <a
                 className="group relative inline-flex h-[54px] min-w-[180px] items-center justify-center overflow-hidden rounded-none bg-white/5 px-6 outline-none transition-transform active:scale-95"
-                href="https://facebook.com"
+                href="https://www.facebook.com/impresscionemarketing"
                 target="_blank"
                 rel="noreferrer"
               >
