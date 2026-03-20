@@ -773,7 +773,7 @@ function ServicesPage({ useHeavyHeroBackground }) {
         </div>
 
         <div className="relative z-10 mx-auto max-w-6xl text-center">
-          <p className="scroll-reveal mb-5 font-mono text-[11px] uppercase tracking-[0.38em] text-zinc-500">Soluções Impressione-se</p>
+          <p className="scroll-reveal mb-5 font-mono text-[11px] uppercase tracking-[0.38em] text-zinc-500">Soluções Impresscione</p>
           <h1 className="scroll-reveal bg-gradient-to-b from-white via-white to-white/55 bg-clip-text font-manrope text-5xl font-medium leading-[0.98] tracking-tighter text-transparent md:text-7xl">
             Nossos serviços
           </h1>
@@ -882,9 +882,7 @@ function App() {
 
   useEffect(() => {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const lowCoreCount = typeof navigator.hardwareConcurrency === 'number' && navigator.hardwareConcurrency <= 4
-    const lowDeviceMemory = typeof navigator.deviceMemory === 'number' && navigator.deviceMemory <= 4
-    const shouldUseLightMode = reducedMotion || lowCoreCount || lowDeviceMemory
+    const shouldUseLightMode = reducedMotion
 
     setUseHeavyHeroBackground(!shouldUseLightMode)
     document.documentElement.classList.toggle('reduced-effects', shouldUseLightMode)
