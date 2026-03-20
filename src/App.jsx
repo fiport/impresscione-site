@@ -189,6 +189,14 @@ function ContactIcon({ className = 'h-5 w-5' }) {
   )
 }
 
+function WhatsAppIcon({ className = 'h-6 w-6' }) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.05 4.94A9.94 9.94 0 0 0 12.03 2C6.54 2 2.07 6.46 2.07 11.95c0 1.76.46 3.48 1.34 4.99L2 22l5.2-1.36a9.9 9.9 0 0 0 4.82 1.23h.01c5.49 0 9.96-4.47 9.96-9.96 0-2.66-1.04-5.16-2.94-7.01Zm-7.02 15.24h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.09.81.83-3.01-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.69-8.23 8.23-8.23 2.2 0 4.26.86 5.81 2.41a8.16 8.16 0 0 1 2.41 5.82c0 4.53-3.69 8.22-8.24 8.22Zm4.51-6.16c-.25-.13-1.47-.73-1.7-.81-.22-.08-.39-.12-.55.13-.17.25-.64.8-.79.96-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.25-.74-.65-1.24-1.46-1.39-1.71-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.02 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.08.42 1.45.54.61.19 1.16.16 1.59.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.22-.16-.47-.29Z" />
+    </svg>
+  )
+}
+
 function SiteLoader({ progress, visible }) {
   return (
     <div
@@ -1191,6 +1199,24 @@ function App() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_10%,rgba(178,55,76,0.12),transparent_24%)]"></div>
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.02)_0,transparent_18%,transparent_82%,rgba(255,255,255,0.02)_100%)]"></div>
       </div>
+
+      <a
+        href="https://wa.me/5549999434867?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas."
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Falar no WhatsApp"
+        className="group fixed bottom-5 right-5 z-[70] flex h-[64px] w-[64px] items-center justify-center rounded-full bg-white/5 outline-none transition-transform duration-300 hover:-translate-y-1 active:scale-95 md:bottom-7 md:right-7 md:h-[70px] md:w-[70px]"
+      >
+        <span className="absolute inset-0 overflow-hidden rounded-full">
+          <span className="absolute -inset-[180%] animate-[spin_3.8s_linear_infinite] rounded-full bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_76%,#b2374c_100%)] opacity-70 transition-opacity duration-300 group-hover:opacity-100"></span>
+        </span>
+        <span className="absolute inset-[2px] rounded-full bg-black"></span>
+        <span className="absolute inset-[2px] rounded-full bg-[radial-gradient(circle_at_50%_100%,rgba(178,55,76,0.22),transparent_62%)] opacity-90"></span>
+        <span className="absolute -inset-2 rounded-full bg-[radial-gradient(circle,rgba(178,55,76,0.22),transparent_62%)] blur-xl opacity-80"></span>
+        <span className="relative z-20 flex items-center justify-center text-white">
+          <WhatsAppIcon className="h-7 w-7 md:h-8 md:w-8" />
+        </span>
+      </a>
 
       <SiteNavbar pathname={pathname} navigateTo={navigateTo} scrollToId={scrollToId} />
 
