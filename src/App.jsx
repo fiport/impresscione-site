@@ -882,10 +882,9 @@ function App() {
 
   useEffect(() => {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const isSmallViewport = window.innerWidth < 1100
     const lowCoreCount = typeof navigator.hardwareConcurrency === 'number' && navigator.hardwareConcurrency <= 4
     const lowDeviceMemory = typeof navigator.deviceMemory === 'number' && navigator.deviceMemory <= 4
-    const shouldUseLightMode = reducedMotion || isSmallViewport || lowCoreCount || lowDeviceMemory
+    const shouldUseLightMode = reducedMotion || lowCoreCount || lowDeviceMemory
 
     setUseHeavyHeroBackground(!shouldUseLightMode)
     document.documentElement.classList.toggle('reduced-effects', shouldUseLightMode)
