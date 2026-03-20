@@ -9,29 +9,26 @@ const MARQUEE_ITEMS = [
 ]
 
 const CLIENT_LOGOS = [
-  '/assets/images/clients/logo 104 (1).png',
-  '/assets/images/clients/Show de bandas com telefone.png',
-  '/assets/images/clients/logo Casa & Garden  COLOR PNG.png',
-  '/assets/images/clients/LOGO ARABUTÃ CAPITAL DA CUCA.png',
-  '/assets/images/clients/ZORZAN PNG BRANCO.png',
-  '/assets/images/clients/Logo 1.png',
-  '/assets/images/clients/VS vendruscolo ok.png',
-  '/assets/images/clients/LOGO OFICIAL Alvorada.png',
-  '/assets/images/clients/DALFER6.png',
-  '/assets/images/clients/Logo - Luis Giordani_f.png',
-  '/assets/images/clients/Logo Agroveterinária CONTORNO.png',
-  '/assets/images/clients/asa prev PNG TRANSP.png',
-  '/assets/images/clients/SEM-FUNDO-1.png',
-].map((path) => ({
-  src: encodeURI(path),
-  alt: path.split('/').pop()?.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ') ?? 'Cliente',
-}))
+  { src: '/assets/images/clients-safe/logo-104-1.png', alt: 'Logo 104' },
+  { src: '/assets/images/clients-safe/show-de-bandas-com-telefone.png', alt: 'Show de bandas com telefone' },
+  { src: '/assets/images/clients-safe/logo-casa-garden-color-png.png', alt: 'Casa & Garden' },
+  { src: '/assets/images/clients-safe/logo-arabuta-capital-da-cuca.png', alt: 'Arabuta Capital da Cuca' },
+  { src: '/assets/images/clients-safe/zorzan-png-branco.png', alt: 'Zorzan' },
+  { src: '/assets/images/clients-safe/logo-1.png', alt: 'Logo 1' },
+  { src: '/assets/images/clients-safe/vs-vendruscolo-ok.png', alt: 'VS Vendruscolo' },
+  { src: '/assets/images/clients-safe/logo-oficial-alvorada.png', alt: 'Logo Oficial Alvorada' },
+  { src: '/assets/images/clients-safe/dalfer6.png', alt: 'Dalfer' },
+  { src: '/assets/images/clients-safe/logo-luis-giordani-f.png', alt: 'Luis Giordani' },
+  { src: '/assets/images/clients-safe/logo-agroveterinaria-contorno.png', alt: 'Agroveterinaria' },
+  { src: '/assets/images/clients-safe/asa-prev-png-transp.png', alt: 'Asa Prev' },
+  { src: '/assets/images/clients-safe/sem-fundo-1.png', alt: 'Cliente' },
+]
 
 const CRITICAL_IMAGES = [
   '/assets/logos/logo-navbar.png',
   '/assets/images/impressiona.png',
-  ...CLIENT_LOGOS.map((logo) => decodeURI(logo.src)),
-].map((path) => encodeURI(path))
+  ...CLIENT_LOGOS.map((logo) => logo.src),
+]
 
 const BENEFITS = [
   {
